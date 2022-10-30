@@ -1,0 +1,11 @@
+{
+  "name": "shared",
+  "version": "0.0.0-unspecified",
+  "main": "shared.js",
+  "types": "shared.d.ts",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

@@ -8,3 +8,5 @@ pluginManagement {
         google()
     }
 }
+
+include(":shared")

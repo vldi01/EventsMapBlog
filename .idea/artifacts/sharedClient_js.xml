@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sharedClient-js">
+    <output-path>$PROJECT_DIR$/sharedClient/build/libs</output-path>
+    <root id="archive" name="sharedClient-js.jar">
+      <element id="module-output" name="EventsMapBlog.sharedClient.jsMain" />
+    </root>
+  </artifact>
+</component>
