@@ -10,3 +10,4 @@ pluginManagement {
 }
 
 include(":shared")
+include(":server")
