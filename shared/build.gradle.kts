@@ -17,10 +17,24 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(Kotlin.serialization)
+
+                with(KtorClient) {
+                    implementation(core)
+                    implementation(serialization)
+                    implementation(contentNegotiation)
+                }
             }
         }
-        val jvmMain by getting
-        val jsMain by getting
+        val jvmMain by getting {
+            dependencies {
+                implementation(KtorClient.cio)
+            }
+        }
+        val jsMain by getting {
+            dependencies {
+                implementation(KtorClient.js)
+            }
+        }
     }
 }
 

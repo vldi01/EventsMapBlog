@@ -21,3 +21,10 @@ object KtorServer {
     const val serialization = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
 }
 
+object KtorClient {
+    const val core = "io.ktor:ktor-client-core:${Versions.ktor}"
+    const val serialization = "io.ktor:ktor-serialization-kotlinx-json:${Versions.ktor}"
+    const val contentNegotiation = "io.ktor:ktor-client-content-negotiation:${Versions.ktor}"
+    const val cio = "io.ktor:ktor-client-cio:${Versions.ktor}"
+    const val js = "io.ktor:ktor-client-js:${Versions.ktor}"
+}
