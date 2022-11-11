@@ -10,9 +10,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
-import kotlin.js.JsExport
 
-@JsExport
 class EventsViewModel {
     val events = MutableStateFlow(listOf<EventModel>())
 
