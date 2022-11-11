@@ -3,6 +3,7 @@ buildscript {
         mavenLocal()
         mavenCentral()
         google()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 
     dependencies {
@@ -18,5 +19,6 @@ allprojects {
         mavenCentral()
         gradlePluginPortal()
         google()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }

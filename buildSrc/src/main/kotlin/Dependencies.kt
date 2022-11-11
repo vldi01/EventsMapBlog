@@ -6,6 +6,8 @@ object Versions {
 
     const val ktor = "2.1.0"
     const val logback = "1.4.4"
+
+    const val compose = "1.3.0-alpha01-dev849"
 }
 
 object Kotlin {
