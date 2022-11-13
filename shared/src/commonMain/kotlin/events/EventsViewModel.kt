@@ -1,42 +1,18 @@
 package events
 
-import ClientSpecific
 import CustomDispatchers
-import io.ktor.client.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.serialization.kotlinx.json.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
+import base.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import kotlinx.serialization.json.Json
 
-class EventsViewModel {
-    val events = MutableStateFlow(listOf<EventModel>())
+class EventsViewModel(private val repo: EventsRepo) : BaseViewModel() {
+    private val _events = MutableStateFlow(listOf<EventModel>())
+    val events = _events.asStateFlow()
 
-    // This should be in DI
-    val client = HttpClient(ClientSpecific.ktorEngine) {
-        install(ContentNegotiation) {
-            json(Json {
-                isLenient = false
-                prettyPrint = true
-                encodeDefaults = true
-            })
-        }
-    }
-    val repo = EventsRepo(client)
-    val scope = CoroutineScope(Job())
-
-    fun onEnter() {
-        scope.launch(CustomDispatchers.io) {
-//            events.emit(repo.getEvents())
-            events.emit(
-                listOf(
-                    EventModel("qwe", "aklasd"),
-                    EventModel("qwe2", "aklwfe222222asd"),
-                    EventModel("qwe3", "akla1123sd"),
-                )
-            )
+    override fun onEnter() {
+        viewModelScope.launch(CustomDispatchers.io) {
+            _events.emit(repo.getEvents())
         }
 
     }

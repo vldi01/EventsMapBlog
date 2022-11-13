@@ -1,9 +1,6 @@
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
-        google()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 
     dependencies {
@@ -15,7 +12,6 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
         mavenCentral()
         gradlePluginPortal()
         google()

@@ -10,6 +10,10 @@ dependencies {
     implementation(compose.web.core)
     implementation(compose.runtime)
 
+    implementation(Kotlin.coroutinesCore)
+
+    implementation(Koin.core)
+
     implementation(project(":shared"))
 }
 

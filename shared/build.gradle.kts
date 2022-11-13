@@ -23,6 +23,8 @@ kotlin {
                     implementation(serialization)
                     implementation(contentNegotiation)
                 }
+
+                implementation(Koin.core)
             }
         }
         val jvmMain by getting {

@@ -8,11 +8,21 @@ object Versions {
     const val logback = "1.4.4"
 
     const val compose = "1.3.0-alpha01-dev849"
+
+    const val koin = "3.2.2"
 }
 
 object Kotlin {
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutines}"
     const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerialization}"
+}
+
+object Koin {
+    const val core = "io.insert-koin:koin-core:${Versions.koin}"
+    const val ktor = "io.insert-koin:koin-ktor:${Versions.koin}"
+    const val test = "io.insert-koin:koin-test:${Versions.koin}"
+    const val android = "io.insert-koin:koin-android:${Versions.koin}"
+    const val compose = "io.insert-koin:koin-androidx-compose:${Versions.koin}"
 }
 
 object KtorServer {
